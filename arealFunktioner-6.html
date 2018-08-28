@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+
+<body>
+    <script>
+
+       function arealUdregning (l,w){
+           if(Number(l) && Number(w)) {
+               return "areal: " + l + w;
+           }
+
+           else{
+               return "Kan ikke regne det ud";
+           }
+
+       }
+
+        function brugerKontakt(){
+            let length = prompt("Længde?"),
+                width = prompt("Bredde?"),
+                besked = arealUdregning(length, width);
+
+                alert(besked);
+
+                if(confirm("Vil du starte forfra?")){
+
+                    brugerKontakt();
+                }
+
+
+        }
+
+       brugerKontakt();
+
+
+    </script>
+
+</body>
+</html>
